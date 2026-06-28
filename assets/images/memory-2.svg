@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Pink sunset memory placeholder</title>
+  <desc id="desc">A romantic pink sunset placeholder image over layered hills.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#31105c"/>
+      <stop offset=".58" stop-color="#a448b8"/>
+      <stop offset="1" stop-color="#ffabc9"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#sky)"/>
+  <circle cx="850" cy="235" r="125" fill="#fff2f8" opacity=".82"/>
+  <path d="M0 645 C180 520 340 620 520 526 C710 426 870 568 1200 438 L1200 900 L0 900Z" fill="#481076" opacity=".82"/>
+  <path d="M0 710 C220 594 380 704 592 600 C768 514 934 664 1200 548 L1200 900 L0 900Z" fill="#25063d" opacity=".82"/>
+  <g fill="#fff8ff" opacity=".7">
+    <circle cx="148" cy="162" r="5"/>
+    <circle cx="302" cy="236" r="4"/>
+    <circle cx="580" cy="118" r="6"/>
+    <circle cx="1050" cy="172" r="5"/>
+  </g>
+  <text x="72" y="120" fill="#fff8ff" font-family="Poppins, Arial, sans-serif" font-size="54" font-weight="700">Replace With Your Photo</text>
+</svg>

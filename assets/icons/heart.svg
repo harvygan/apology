@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Heart icon</title>
+  <defs>
+    <linearGradient id="heartGradient" x1="8" x2="56" y1="8" y2="58">
+      <stop offset="0" stop-color="#fff4fb"/>
+      <stop offset=".45" stop-color="#ff7fbc"/>
+      <stop offset="1" stop-color="#b989e6"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#2b0a48"/>
+  <path fill="url(#heartGradient)" d="M32 54S10 41 10 24.5C10 16.7 15.8 11 23.1 11c4.1 0 7.1 2 8.9 4.5C33.8 13 36.8 11 40.9 11 48.2 11 54 16.7 54 24.5 54 41 32 54 32 54z"/>
+</svg>
