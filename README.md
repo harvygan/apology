@@ -1,89 +1,40 @@
-# Romantic Apology Website
+# For My Favorite Person
 
-A responsive, framework-free apology website built with HTML5, CSS3, and vanilla JavaScript.
+A responsive, framework-free digital love letter built with HTML, CSS, and vanilla JavaScript.
 
-## Run Locally
+## Run locally
 
-Open `index.html` directly in a browser, or serve the folder with any static server.
+This repository does not currently contain a Laravel installation or Node build setup: there is no `composer.json`, `package.json`, `routes/`, `resources/`, or `public/` directory. The existing project is a static site, so no `composer install` or `npm install` is required.
 
-Example with Python:
+From the project folder, run either:
 
 ```bash
 python -m http.server 8000
 ```
 
-Then visit:
+or, if you prefer PHP's built-in server:
 
-```text
-http://localhost:8000
+```bash
+php -S 127.0.0.1:8000
 ```
 
-## Replace Placeholder Images
+Then open <http://127.0.0.1:8000>.
 
-Gallery images are in:
+Opening `index.html` directly also works for the local photos. A local server is recommended because the background song uses a YouTube iframe and browser autoplay policies work more predictably over HTTP.
 
-```text
-assets/images/
-```
+## What is included
 
-Replace `memory-1.svg` through `memory-6.svg` with your own photos. If you use `.jpg`, `.jpeg`, `.png`, or `.webp` files, update the matching `src` and `data-full` values in `index.html`.
+- Purple/lavender editorial love-letter design with responsive navigation.
+- Story-style photo viewer with timed progression, touch swipes, keyboard arrows, captions, and a blurred photo backdrop.
+- Bento memory gallery with an accessible lightbox.
+- “Things I love about you” cards, aged-paper letter, relationship timeline, and final message reveal.
+- Floating YouTube controller for “Libu-libong Buwan”; autoplay is attempted, with a play/pause and mute/unmute fallback.
+- Scroll reveals, gentle image transitions, and `prefers-reduced-motion` support.
 
-## Add Background Music
+## Photos
 
-Place your music file here:
+The original folder `assets/images/hd her/` is preserved. A curated set of copied, web-friendly names lives in `assets/images/her/` and is used by `index.html`; the original photos are not overwritten.
 
-```text
-assets/music/background-music.mp3
-```
+## Music
 
-The site does not autoplay music. Visitors must press Play.
-
-If your file has a different name or format, update the `<source>` element in `index.html`.
-
-## Edit The Apology Text
-
-Open `index.html` and edit the text inside these sections:
-
-- `#hero`
-- `#apology`
-- `#learned`
-- `#promise`
-- `#memories`
-- `#reasons`
-- `#final`
-
-The main styles are in `style.css`. Colors are controlled by CSS variables near the top of the file.
-
-## Deploy To GitHub Pages
-
-1. Create a GitHub repository.
-2. Upload all files and folders from this project.
-3. In GitHub, open **Settings**.
-4. Go to **Pages**.
-5. Under **Build and deployment**, choose **Deploy from a branch**.
-6. Select the `main` branch and `/root`.
-7. Save and wait for GitHub to publish the site.
-
-## Deploy To Vercel
-
-1. Go to <https://vercel.com>.
-2. Create a new project.
-3. Import your GitHub repository or drag-and-drop this folder.
-4. Keep the framework preset as **Other**.
-5. Deploy.
-
-## Deploy To Netlify
-
-1. Go to <https://www.netlify.com>.
-2. Open **Sites**.
-3. Drag this project folder into the deploy area, or import it from GitHub.
-4. Leave the build command empty.
-5. Set the publish directory to the project root.
-6. Deploy.
-
-## Notes
-
-- The navigation collapses into a hamburger menu on mobile.
-- Gallery images lazy-load for performance.
-- The music player includes Play, Pause, Volume, and Loop controls.
-- Animations respect reduced-motion browser preferences.
+The site embeds the supplied YouTube track and does not download or bundle copyrighted audio. Browsers may still require a tap before sound starts.

@@ -1,223 +1,316 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A heartfelt romantic apology letter built as an elegant responsive website.">
-  <title>To My Love</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#241434">
+  <meta name="description" content="A private little love story, made with a full heart.">
+  <title>For My Favorite Person</title>
   <link rel="icon" href="assets/icons/heart.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <a class="skip-link" href="#apology">Skip to apology</a>
+  <a class="skip-link" href="#intro">Skip to the love story</a>
 
-  <div class="ambient-bg" aria-hidden="true">
-    <div class="gradient-orchestra"></div>
-    <div class="particle-field"></div>
-    <div class="heart-field"></div>
-  </div>
+  <div class="site-noise" aria-hidden="true"></div>
+  <div class="ambient-shape ambient-shape-one" aria-hidden="true"></div>
+  <div class="ambient-shape ambient-shape-two" aria-hidden="true"></div>
 
-  <header class="site-header" aria-label="Primary navigation">
-    <nav class="nav-shell">
-      <a class="logo" href="#hero" aria-label="To My Love home">My Love</a>
-      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu">
-        <span></span>
-        <span></span>
-        <span></span>
+  <header class="site-header" id="home">
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a class="brand" href="#home" aria-label="Back to the beginning">
+        <span class="brand-mark" aria-hidden="true">♡</span>
+        <span>for my favorite person</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span>
       </button>
       <ul class="nav-menu" id="nav-menu">
-        <li><a href="#apology">Apology</a></li>
-        <li><a href="#promise">Promise</a></li>
         <li><a href="#memories">Memories</a></li>
-        <li><a href="#reasons">Reasons</a></li>
-        <li><a href="#final">Final</a></li>
+        <li><a href="#reasons">Things I love</a></li>
+        <li><a href="#letter">My letter</a></li>
+        <li><a href="#always">Always you</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <!-- Hero Section -->
-    <section class="hero section" id="hero">
-      <div class="hero-content reveal zoom">
-        <div class="hero-heart" aria-hidden="true">❤</div>
-        <h1>To My Love ❤️</h1>
-        <p class="hero-subtitle typing-text" data-text="I know I hurt you.&#10;&#10;I don't expect this website to fix everything.&#10;&#10;I only hope you'll hear my heart."></p>
-        <a class="primary-btn ripple-link" href="#apology">Read My Heart</a>
+    <section class="hero-section section-pad" aria-labelledby="hero-title">
+      <div class="hero-copy reveal-ready">
+        <p class="eyebrow">a little place on the internet made only for you <span aria-hidden="true">✦</span></p>
+        <h1 id="hero-title">To my <em>favorite</em> person.</h1>
+        <p class="hero-lede">I know words cannot fix everything, but I hope this shows you how much you mean to me.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#intro">Open my heart <span aria-hidden="true">♡</span></a>
+          <button class="quiet-link" type="button" data-start-music>♪ <span>play our song</span></button>
+        </div>
+        <div class="hero-note" aria-label="A note from me">
+          <span class="hero-note-line"></span>
+          <span>made slowly, sincerely, and with all my love</span>
+        </div>
       </div>
-      <a class="scroll-cue" href="#apology" aria-label="Scroll to apology section">
-        <span></span>
+
+      <div class="hero-art reveal-ready" aria-label="A favorite photo of you">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <figure class="hero-frame hero-frame-main">
+          <img src="assets/images/her/her-soft.jpg" alt="A close-up portrait of my favorite person">
+          <figcaption>my favorite view</figcaption>
+        </figure>
+        <figure class="hero-frame hero-frame-small">
+          <img src="assets/images/her/couple-night.jpg" alt="A night photo of us together" loading="lazy">
+          <figcaption>us, somewhere in the middle of everything</figcaption>
+        </figure>
+        <span class="hero-sparkle sparkle-one" aria-hidden="true">✦</span>
+        <span class="hero-sparkle sparkle-two" aria-hidden="true">✧</span>
+        <span class="hero-side-note">always<br><em>you</em></span>
+      </div>
+
+      <a class="scroll-cue" href="#intro" aria-label="Scroll to the beginning of the love story">
+        <span>scroll slowly</span><i aria-hidden="true">↓</i>
       </a>
     </section>
 
-    <!-- Section 1: My Apology -->
-    <section class="section content-section" id="apology">
-      <div class="section-inner narrow">
-        <article class="glass-card large-card reveal fade-up">
-          <p class="section-kicker">My Apology</p>
-          <h2>I'm Sorry</h2>
-          <p>
-            I am sorry for lying about already eating. I know the food was only part of what happened.
-            The deeper hurt came from me choosing dishonesty when I should have trusted you with the truth.
-            I broke something important in that moment, and I take full responsibility for it.
-          </p>
-          <p>
-            There is no excuse that makes it okay. I understand why it hurt you, why it made you question
-            my honesty, and why a small lie can feel much bigger when it touches trust. I regret choosing
-            the easier answer over the honest one. You deserved my truth, not a version of it shaped by fear
-            or avoidance.
-          </p>
+    <section class="intro-section section-pad" id="intro" aria-labelledby="intro-title">
+      <div class="section-narrow intro-copy reveal">
+        <div class="section-label"><span>00</span><i></i><span>a little note</span></div>
+        <h2 id="intro-title">Sometimes, a normal message <em>isn't enough.</em></h2>
+        <p class="intro-lede">I made this for you because I wanted to create something you could come back to — something that would remind you that behind all of my mistakes, misunderstandings, and imperfect moments, there is still one thing I am completely sure about.</p>
+        <p class="handwritten intro-signoff">I love you. Truly.</p>
+      </div>
+    </section>
+
+    <section class="stories-section section-pad" id="memories" aria-labelledby="stories-title">
+      <div class="section-wrap">
+        <div class="section-heading reveal">
+          <div class="section-label"><span>01</span><i></i><span>little glimpses</span></div>
+          <h2 id="stories-title">The little world I see in <em>you.</em></h2>
+          <p>Tap a circle. Take your time. Every version of you is beautiful to me.</p>
+        </div>
+
+        <div class="story-list" aria-label="Photo stories">
+          <button class="story-thumb reveal" type="button" data-story-index="0" aria-label="Open story: my favorite smile">
+            <span class="story-ring"><img src="assets/images/her/her-smile.jpg" alt="Your smile" loading="lazy"></span>
+            <span>your smile</span>
+          </button>
+          <button class="story-thumb reveal" type="button" data-story-index="1" aria-label="Open story: always you">
+            <span class="story-ring"><img src="assets/images/her/couple-night.jpg" alt="Us together at night" loading="lazy"></span>
+            <span>always you</span>
+          </button>
+          <button class="story-thumb reveal" type="button" data-story-index="2" aria-label="Open story: your little things">
+            <span class="story-ring"><img src="assets/images/her/her-yellow.jpg" alt="You in yellow" loading="lazy"></span>
+            <span>little things</span>
+          </button>
+          <button class="story-thumb reveal" type="button" data-story-index="3" aria-label="Open story: soft moments">
+            <span class="story-ring"><img src="assets/images/her/her-purple.jpg" alt="You in purple light" loading="lazy"></span>
+            <span>soft moments</span>
+          </button>
+          <button class="story-thumb reveal" type="button" data-story-index="4" aria-label="Open story: one of my favorites">
+            <span class="story-ring"><img src="assets/images/her/couple-photobooth.jpeg" alt="Us in a photobooth" loading="lazy"></span>
+            <span>one favorite</span>
+          </button>
+          <button class="story-thumb reveal" type="button" data-story-index="5" aria-label="Open story: your quiet side">
+            <span class="story-ring"><img src="assets/images/her/her-dreamy.jpg" alt="A quiet portrait of you" loading="lazy"></span>
+            <span>your quiet side</span>
+          </button>
+          <button class="story-thumb reveal" type="button" data-story-index="6" aria-label="Open story: my person">
+            <span class="story-ring"><img src="assets/images/her/her-wink.jpeg" alt="A playful portrait of you" loading="lazy"></span>
+            <span>my person</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-section section-pad" aria-labelledby="gallery-title">
+      <div class="section-wrap">
+        <div class="section-heading section-heading-split reveal">
+          <div>
+            <div class="section-label"><span>02</span><i></i><span>the photo album</span></div>
+            <h2 id="gallery-title">Memories I <em>hold close.</em></h2>
+          </div>
+          <p>Some moments look ordinary to everyone else. They feel like everything to me because you are there.</p>
+        </div>
+
+        <div class="memory-grid" aria-label="Memory photo gallery">
+          <button class="memory-tile memory-tile-tall reveal" type="button" data-full="assets/images/her/her-quiet.jpg" data-caption="Still my favorite person.">
+            <img src="assets/images/her/her-quiet.jpg" alt="A portrait of you in a grey shirt" loading="lazy">
+            <span class="tile-caption">still my favorite person <b>↗</b></span>
+          </button>
+          <button class="memory-tile memory-tile-wide reveal" type="button" data-full="assets/images/her/couple-strip.jpg" data-caption="A little moment that became one of my favorites.">
+            <img src="assets/images/her/couple-strip.jpg" alt="A two-photo strip of us together" loading="lazy">
+            <span class="tile-caption">a little moment worth keeping <b>↗</b></span>
+          </button>
+          <button class="memory-tile reveal" type="button" data-full="assets/images/her/her-close-2.jpg" data-caption="Every version of you is beautiful to me.">
+            <img src="assets/images/her/her-close-2.jpg" alt="A close portrait of you smiling softly" loading="lazy">
+            <span class="tile-caption">every version of you <b>↗</b></span>
+          </button>
+          <button class="memory-tile memory-tile-accent reveal" type="button" data-full="assets/images/her/her-purple.jpg" data-caption="You make ordinary days feel special.">
+            <img src="assets/images/her/her-purple.jpg" alt="You in a soft purple glow" loading="lazy">
+            <span class="tile-caption">you make days softer <b>↗</b></span>
+          </button>
+          <button class="memory-tile memory-tile-couple reveal" type="button" data-full="assets/images/her/couple-photobooth.jpeg" data-caption="A memory I never want to lose.">
+            <img src="assets/images/her/couple-photobooth.jpeg" alt="Us smiling together in a photobooth" loading="lazy">
+            <span class="tile-caption">a memory I never want to lose <b>↗</b></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="reasons-section section-pad" id="reasons" aria-labelledby="reasons-title">
+      <div class="section-wrap">
+        <div class="section-heading reveal">
+          <div class="section-label"><span>03</span><i></i><span>the little things</span></div>
+          <h2 id="reasons-title">Things I love <em>about you.</em></h2>
+          <p>Not a complete list. I would need a lifetime for that.</p>
+        </div>
+        <div class="love-grid">
+          <article class="love-card love-card-feature reveal"><span class="card-number">01</span><span class="card-symbol" aria-hidden="true">♡</span><h3>Your smile</h3><p>It somehow makes everything around me feel a little lighter.</p></article>
+          <article class="love-card reveal"><span class="card-number">02</span><span class="card-symbol" aria-hidden="true">✦</span><h3>Your heart</h3><p>The way you care about the people you love is one of the things I admire most.</p></article>
+          <article class="love-card reveal"><span class="card-number">03</span><span class="card-symbol" aria-hidden="true">◌</span><h3>Your presence</h3><p>Even doing nothing feels special when I am with you.</p></article>
+          <article class="love-card reveal"><span class="card-number">04</span><span class="card-symbol" aria-hidden="true">⌁</span><h3>Your little things</h3><p>The small habits, expressions, and random moments that make you uniquely you.</p></article>
+          <article class="love-card reveal"><span class="card-number">05</span><span class="card-symbol" aria-hidden="true">↗</span><h3>The way you love</h3><p>I know I do not always show it perfectly, but I never take your love for granted.</p></article>
+          <article class="love-card love-card-dark reveal"><span class="card-number">06</span><span class="card-symbol" aria-hidden="true">♡</span><h3>You</h3><p>Not because you are perfect, but because you are you — and you are still the person I want beside me.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="letter-section section-pad" id="letter" aria-labelledby="letter-title">
+      <div class="section-wrap">
+        <div class="section-heading reveal">
+          <div class="section-label"><span>04</span><i></i><span>the important part</span></div>
+          <h2 id="letter-title">A letter from <em>my heart.</em></h2>
+          <p>For the things I should have said sooner, and the promises I want to show through my actions.</p>
+        </div>
+
+        <article class="letter-paper reveal" aria-label="A letter from my heart">
+          <div class="paper-stamp" aria-hidden="true">♡</div>
+          <div class="letter-meta"><span>for you</span><span>with love, always</span></div>
+          <div class="letter-content">
+            <p class="letter-salutation">My love,</p>
+            <p>I don't really know where to start because there are so many things I want to tell you, and sometimes I feel like normal messages aren't enough to explain everything that's inside my heart.</p>
+            <p class="letter-emphasis">First, I'm sorry.</p>
+            <p>I'm sorry for the times I hurt you, especially for the moments when I knew I did something wrong but didn't apologize right away. I know that saying sorry late can sometimes make things hurt even more, because while I was taking my time figuring out what to say, you were already there carrying the pain caused by something I did.</p>
+            <p>I know I don't always handle things perfectly. Sometimes I become quiet. Sometimes I struggle to explain myself. Sometimes my actions don't immediately match what I really feel. And I know that can make you wonder if I truly understand you or if I care enough.</p>
+            <p>But please know that I do.</p>
+            <p>I care about you more than I probably manage to show sometimes.</p>
+            <p>I know you've asked me for consistency, and I've been thinking about that a lot. I understand that love shouldn't only be obvious during the good days. It should also be present when we're tired, upset, annoyed, confused, or having a difficult time understanding each other.</p>
+            <p class="letter-emphasis">I don't want to love you only when everything is easy.</p>
+            <p>I want to learn how to love you better when things are difficult too.</p>
+            <p>I know we're both human. We both have days when we're not okay. We both have emotions that sometimes become difficult to explain. And I don't expect our relationship to be perfect all the time.</p>
+            <p>What I want is for us to continue choosing to understand each other.</p>
+            <p>I want us to talk instead of letting silence create bigger problems between us.</p>
+            <p>I want to listen better.</p>
+            <p>I want to become more aware of the things that hurt you.</p>
+            <p>I want my actions to make you feel secure instead of making you question how much you mean to me.</p>
+            <p>And most importantly, I don't want you to ever feel like you're asking for too much just because you want effort, reassurance, affection, communication, or consistency from me.</p>
+            <p class="letter-emphasis">You deserve to feel loved.</p>
+            <p>Not occasionally.</p>
+            <p>Not only when everything is okay.</p>
+            <p>You deserve to feel it consistently.</p>
+            <p>I can't promise that I'll suddenly become perfect after writing this because that wouldn't be honest.</p>
+            <p>I'll still make mistakes. There may still be moments when I don't know exactly what to say or do.</p>
+            <p>But what I can promise is that I want to keep learning.</p>
+            <p>I want to keep trying.</p>
+            <p>I want to communicate better.</p>
+            <p>I want to apologize when I'm wrong instead of letting pride or confusion delay it.</p>
+            <p>I want to understand your feelings instead of immediately defending mine.</p>
+            <p>And I want to show you through my actions that loving you isn't something I only say.</p>
+            <p>You're such an important part of my life.</p>
+            <p>There are moments with you that might seem ordinary to everyone else, but somehow they become special to me because you're there.</p>
+            <p>Your smile. Your voice. Your random stories. Your moods. Your little habits. The way you laugh. Even the little things that annoy me sometimes.</p>
+            <p>They're all parts of you that I've grown to love.</p>
+            <p>And when I think about losing those things, that's when I realize even more how important you are to me.</p>
+            <p>I don't want our mistakes to become bigger than our love.</p>
+            <p>I don't want one difficult moment to erase all the beautiful ones we've shared.</p>
+            <p>I want us to grow through them.</p>
+            <p>I want us to look back one day and realize that instead of allowing our problems to pull us apart, we learned how to understand each other better because of them.</p>
+            <p>Thank you for loving me even during the moments when I'm difficult to understand. Thank you for the patience you've given me. Thank you for the memories we've created. Thank you for being someone who makes me want to become better.</p>
+            <p>And I'm sorry for every moment when my actions made you feel otherwise.</p>
+            <p>I don't know exactly what the future will look like.</p>
+            <p class="letter-emphasis">But there is something I do know:</p>
+            <p class="handwritten letter-highlight">I still want you in it.</p>
+            <p>I still want your stories. I still want your laughter. I still want our random moments. I still want the simple days. I still want the exciting days.</p>
+            <p>And even when there are difficult days, I want us to learn how to face them together instead of letting them become reasons to lose each other.</p>
+            <p>So this little website isn't supposed to magically fix everything. It's just something I made because I wanted you to see a piece of what's inside my heart.</p>
+            <p>A reminder that even when I don't always express things perfectly, my feelings for you are real.</p>
+            <p>And if you're willing, I want to keep building something better with you.</p>
+            <p>Not perfect. Just honest. Safe. Consistent. Understanding. And full of love.</p>
+            <p>I'm sorry for the times I hurt you. Thank you for the times you've stayed. And thank you for simply being you.</p>
+            <p>Out of all the people, all the places, all the possibilities... I'm still grateful that somehow, I found you.</p>
+            <p class="letter-highlight handwritten">And if I had to choose again, I'd still choose you. Always.</p>
+            <div class="letter-signature"><span>With all my love,</span><strong>Yours ♡</strong></div>
+          </div>
         </article>
       </div>
     </section>
 
-    <!-- Section 2: What I Learned -->
-    <section class="section content-section" id="learned">
-      <div class="section-inner">
-        <div class="section-heading reveal fade-up">
-          <p class="section-kicker">What I Learned</p>
-          <h2>Small Choices Matter</h2>
+    <section class="choose-section section-pad" id="always" aria-labelledby="choose-title">
+      <div class="choose-orb" aria-hidden="true">♡</div>
+      <div class="choose-content reveal">
+        <div class="section-label section-label-light"><span>05</span><i></i><span>if I could tell you one thing</span></div>
+        <h2 id="choose-title">Even when things get difficult, I don't want a life where losing you becomes easier than learning how to love you better.</h2>
+        <p class="choose-answer handwritten">I still choose you.</p>
+      </div>
+    </section>
+
+    <section class="timeline-section section-pad" aria-labelledby="timeline-title">
+      <div class="section-wrap">
+        <div class="section-heading reveal">
+          <div class="section-label"><span>06</span><i></i><span>our little moments</span></div>
+          <h2 id="timeline-title">A few pieces of <em>us.</em></h2>
         </div>
-        <div class="lesson-grid">
-          <article class="glass-card lesson-card reveal fade-up">
-            <span class="card-icon" aria-hidden="true">❤️</span>
-            <h3>Trust</h3>
-            <p>Trust is built through honesty, patience, and consistency. Even a small lie can damage it because it asks your heart to doubt what should have felt safe.</p>
-          </article>
-          <article class="glass-card lesson-card reveal slide-left">
-            <span class="card-icon" aria-hidden="true">🌸</span>
-            <h3>Honesty</h3>
-            <p>Difficult truths are still kinder than comforting lies. I should have been brave enough to tell you the truth, even if it felt awkward in the moment.</p>
-          </article>
-          <article class="glass-card lesson-card reveal slide-right">
-            <span class="card-icon" aria-hidden="true">💜</span>
-            <h3>Love</h3>
-            <p>Real love is not only soft words and sweet moments. It is being truthful when honesty is uncomfortable, because the person you love deserves that respect.</p>
-          </article>
+        <div class="timeline">
+          <article class="timeline-item reveal"><div class="timeline-image"><img src="assets/images/her/couple-photobooth.jpeg" alt="Us together in a photobooth" loading="lazy"></div><div class="timeline-copy"><span>01 / a favorite</span><h3>A memory worth keeping.</h3><p>Somehow, even a small picture can hold an entire feeling.</p></div></article>
+          <article class="timeline-item timeline-item-reverse reveal"><div class="timeline-image"><img src="assets/images/her/her-smile.jpg" alt="Your bright smile" loading="lazy"></div><div class="timeline-copy"><span>02 / your smile</span><h3>This smile deserves its own place here.</h3><p>It still feels like one of the easiest ways back to a good day.</p></div></article>
+          <article class="timeline-item reveal"><div class="timeline-image"><img src="assets/images/her/couple-night.jpg" alt="Us outside together at night" loading="lazy"></div><div class="timeline-copy"><span>03 / together</span><h3>A little moment that became one of my favorites.</h3><p>Not because it was perfect. Because it was ours.</p></div></article>
         </div>
       </div>
     </section>
 
-    <!-- Section 3: My Promise -->
-    <section class="section content-section" id="promise">
-      <div class="section-inner narrow">
-        <article class="glass-card promise-card reveal zoom">
-          <p class="section-kicker">My Promise</p>
-          <h2 class="heartbeat-title">I Want To Do Better</h2>
-          <p>
-            I cannot promise to be perfect. I can promise to become more honest, more mindful, and more willing
-            to face uncomfortable truths instead of hiding behind easy answers.
-          </p>
-          <p>
-            I do not want my words to carry all the weight. I want my actions to prove my sincerity slowly,
-            consistently, and respectfully. Trust is not something I can demand back. It is something I have to earn.
-          </p>
-        </article>
+    <section class="final-section section-pad" id="final" aria-labelledby="final-title">
+      <div class="final-inner reveal">
+        <p class="eyebrow eyebrow-light">one more thing</p>
+        <h2 id="final-title">No matter how many pages this website has...</h2>
+        <p class="final-subtitle">I still couldn't fit everything I feel about you here.</p>
+        <p class="final-love">I love you.</p>
+        <p class="final-subtitle">And I hope I get to keep showing you that.</p>
+        <button class="button button-light" id="final-message-button" type="button" aria-expanded="false">One more thing <span aria-hidden="true">♡</span></button>
+        <p class="final-reveal" id="final-message" hidden>Thank you for being part of my life. I'll keep choosing you, not just through words, but through the way I treat you.</p>
       </div>
-    </section>
-
-    <!-- Section 4: Memories -->
-    <section class="section content-section" id="memories">
-      <div class="section-inner">
-        <div class="section-heading reveal fade-up">
-          <p class="section-kicker">Memories</p>
-          <h2>Moments I Hold Close</h2>
-        </div>
-        <div class="gallery" aria-label="Memory photo gallery">
-          <button class="gallery-item reveal fade-up" type="button" data-full="assets/images/68a1ae9e-b894-4cf2-94b9-e7353cda65ba.jpg" aria-label="Open memory image one">
-            <img src="assets/images/68a1ae9e-b894-4cf2-94b9-e7353cda65ba.jpg" alt="A special memory together" loading="lazy">
-          </button>
-          <button class="gallery-item reveal fade-up" type="button" data-full="assets/images/4879013f-2e08-40f1-9814-7f1de9863f17.jpg" aria-label="Open memory image two">
-            <img src="assets/images/4879013f-2e08-40f1-9814-7f1de9863f17.jpg" alt="A favorite moment together" loading="lazy">
-          </button>
-          <button class="gallery-item reveal fade-up" type="button" data-full="assets/images/2.jpeg" aria-label="Open memory image three">
-            <img src="assets/images/2.jpeg" alt="A cherished photo together" loading="lazy">
-          </button>
-          <button class="gallery-item reveal fade-up" type="button" data-full="assets/images/8thhh.png" aria-label="Open memory image four">
-            <img src="assets/images/8thhh.png" alt="An eighth-month memory together" loading="lazy">
-          </button>
-          <button class="gallery-item reveal fade-up" type="button" data-full="assets/images/caadf21e-cb98-42a9-a4fa-7a6ac5f61ddc.jpg" aria-label="Open memory image five">
-            <img src="assets/images/caadf21e-cb98-42a9-a4fa-7a6ac5f61ddc.jpg" alt="A sweet memory together" loading="lazy">
-          </button>
-          <button class="gallery-item reveal fade-up" type="button" data-full="assets/images/1.jpg" aria-label="Open memory image six">
-            <img src="assets/images/1.jpg" alt="A meaningful photo together" loading="lazy">
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 5: Reasons I Love You -->
-    <section class="section content-section" id="reasons">
-      <div class="section-inner">
-        <div class="section-heading reveal fade-up">
-          <p class="section-kicker">Reasons I Love You</p>
-          <h2>The Little Things That Mean Everything</h2>
-        </div>
-        <div class="reason-grid">
-          <article class="reason-card reveal fade-up"><span>❤️</span><p>Your smile</p></article>
-          <article class="reason-card reveal fade-up"><span>❤️</span><p>Your kindness</p></article>
-          <article class="reason-card reveal fade-up"><span>❤️</span><p>Your patience</p></article>
-          <article class="reason-card reveal fade-up"><span>❤️</span><p>Your laugh</p></article>
-          <article class="reason-card reveal fade-up"><span>❤️</span><p>The way you care</p></article>
-          <article class="reason-card reveal fade-up"><span>❤️</span><p>Everything that makes you you</p></article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Final Section -->
-    <section class="section content-section final-section" id="final">
-      <div class="section-inner narrow">
-        <article class="glass-card final-card reveal zoom">
-          <p class="section-kicker">From My Heart</p>
-          <h2>One Last Thing...</h2>
-          <p>
-            I am not asking for immediate forgiveness. I understand that trust takes time to rebuild, and I know
-            this website alone cannot fix what I broke. If you ever decide to give me another chance, I want to
-            earn your trust through consistent honesty and actions.
-          </p>
-          <p>
-            If you are not ready, I will respect that decision. Your feelings matter. Your healing matters.
-            I love you.
-          </p>
-          <button class="heart-btn ripple-link" type="button" id="open-modal">Thank You for Reading ❤️</button>
-        </article>
-      </div>
+      <div class="final-heart-field" aria-hidden="true"><span>♡</span><span>♡</span><span>♡</span></div>
     </section>
   </main>
 
-  <!-- Floating Music Player -->
-  <aside class="music-player" aria-label="Background music player">
-    <audio id="background-music" preload="auto" autoplay loop>
-      <source src="assets/music/palagi.mp3" type="audio/mpeg">
-    </audio>
-    <button class="music-btn" type="button" id="play-btn" aria-label="Play music">▶</button>
-    <button class="music-btn" type="button" id="pause-btn" aria-label="Pause music">❚❚</button>
-    <label class="volume-control" for="volume-slider">
-      <span>Volume</span>
-      <input id="volume-slider" type="range" min="0" max="1" step="0.01" value="0.45">
-    </label>
-    <label class="loop-control">
-      <input id="loop-toggle" type="checkbox" checked>
-      <span>Loop</span>
-    </label>
+  <footer class="site-footer"><span>made for you, with a full heart</span><span>♡</span><span>always</span></footer>
+
+  <aside class="music-dock" id="music-dock" aria-label="Background music controls">
+    <iframe id="song-frame" class="song-frame" src="https://www.youtube.com/embed/8lbRDzhjqeM?enablejsapi=1&playsinline=1&controls=0&rel=0&loop=1&playlist=8lbRDzhjqeM&autoplay=1" allow="autoplay; encrypted-media" title="Libu-libong Buwan by December Avenue"></iframe>
+    <button class="music-main" id="music-toggle" type="button" aria-label="Play our song">
+      <span class="music-icon" id="music-icon" aria-hidden="true">♪</span>
+      <span class="music-copy"><small>our song</small><strong id="music-label">play music</strong></span>
+    </button>
+    <button class="music-mini" id="music-mute" type="button" aria-label="Mute music" aria-pressed="false">⌁</button>
   </aside>
 
-  <!-- Lightbox -->
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Expanded memory image" hidden>
-    <button class="close-btn" type="button" id="close-lightbox" aria-label="Close image viewer">×</button>
-    <img id="lightbox-image" src="" alt="">
+  <div class="story-viewer" id="story-viewer" role="dialog" aria-modal="true" aria-labelledby="story-viewer-title" hidden>
+    <div class="story-backdrop" id="story-backdrop" aria-hidden="true"></div>
+    <div class="story-dialog">
+      <div class="story-progress" id="story-progress" aria-hidden="true"></div>
+      <div class="story-topline"><span id="story-viewer-title">our little moments</span><button class="viewer-close" id="story-close" type="button" aria-label="Close photo stories">×</button></div>
+      <div class="story-stage" id="story-stage">
+        <button class="story-hit story-hit-prev" id="story-prev" type="button" aria-label="Previous story">‹</button>
+        <figure class="story-photo"><img id="story-image" src="" alt=""><figcaption id="story-caption"></figcaption></figure>
+        <button class="story-hit story-hit-next" id="story-next" type="button" aria-label="Next story">›</button>
+      </div>
+      <div class="story-bottomline"><span id="story-counter">1 / 7</span><span>tap sides or use ← →</span></div>
+    </div>
   </div>
 
-  <!-- Closing Modal -->
-  <div class="modal" id="love-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
-    <div class="modal-card glass-card">
-      <button class="close-btn" type="button" id="close-modal" aria-label="Close message">×</button>
-      <h2 id="modal-title">No more promises.</h2>
-      <p>Just actions.</p>
-      <p>I love you.</p>
-    </div>
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-caption" hidden>
+    <button class="viewer-close" id="lightbox-close" type="button" aria-label="Close photo">×</button>
+    <figure class="lightbox-figure"><img id="lightbox-image" src="" alt=""><figcaption id="lightbox-caption"></figcaption></figure>
   </div>
 
   <script src="script.js"></script>
