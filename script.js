@@ -65,18 +65,14 @@ if (prefersReducedMotion || !("IntersectionObserver" in window)) {
   revealItems.forEach((item) => revealObserver.observe(item));
 }
 
-/* Music: the player is the supplied YouTube track, kept visually hidden. */
-const songFrame = $("#song-frame");
+/* Music: the supplied local MP3, kept visually hidden behind the small controller. */
+const backgroundMusic = $("#background-music");
 const musicToggle = $("#music-toggle");
 const musicMute = $("#music-mute");
 const musicLabel = $("#music-label");
 const musicIcon = $("#music-icon");
 let musicPlaying = false;
 let musicMuted = false;
-
-function sendYouTubeCommand(func, args = []) {
-  songFrame?.contentWindow?.postMessage(JSON.stringify({ event: "command", func, args }), "*");
-}
 
 function updateMusicUi() {
   if (!musicLabel || !musicToggle) return;
@@ -88,9 +84,14 @@ function updateMusicUi() {
   if (musicMute) musicMute.textContent = musicMuted ? "⊘" : "⌁";
 }
 
-function startMusic() {
-  sendYouTubeCommand("playVideo");
-  musicPlaying = true;
+async function startMusic() {
+  if (!backgroundMusic) return;
+  try {
+    await backgroundMusic.play();
+    musicPlaying = true;
+  } catch {
+    musicPlaying = false;
+  }
   updateMusicUi();
 }
 
@@ -109,7 +110,7 @@ beginButton?.addEventListener("click", beginExperience);
 if (welcomeScreen && !welcomeScreen.hidden) window.setTimeout(() => beginButton?.focus(), 0);
 
 function pauseMusic() {
-  sendYouTubeCommand("pauseVideo");
+  backgroundMusic?.pause();
   musicPlaying = false;
   updateMusicUi();
 }
@@ -119,31 +120,33 @@ musicToggle?.addEventListener("click", () => {
   else startMusic();
 });
 
+$$('[data-start-music]').forEach((button) => button.addEventListener("click", startMusic));
+
 musicMute?.addEventListener("click", () => {
   musicMuted = !musicMuted;
-  sendYouTubeCommand(musicMuted ? "mute" : "unMute");
+  if (backgroundMusic) backgroundMusic.muted = musicMuted;
   updateMusicUi();
 });
 
-$$('[data-start-music]').forEach((button) => button.addEventListener("click", startMusic));
+backgroundMusic?.addEventListener("play", () => {
+  musicPlaying = true;
+  updateMusicUi();
+});
 
-songFrame?.addEventListener("load", () => {
-  sendYouTubeCommand("addEventListener", ["onStateChange"]);
+backgroundMusic?.addEventListener("pause", () => {
+  musicPlaying = false;
+  updateMusicUi();
+});
+
+backgroundMusic?.addEventListener("volumechange", () => {
+  musicMuted = Boolean(backgroundMusic.muted);
+  updateMusicUi();
+});
+
+if (backgroundMusic) {
+  backgroundMusic.volume = 0.42;
   if (!prefersReducedMotion) window.setTimeout(startMusic, 500);
-});
-
-window.addEventListener("message", (event) => {
-  if (typeof event.data !== "string") return;
-  try {
-    const payload = JSON.parse(event.data);
-    if (payload.event !== "onStateChange") return;
-    if (payload.info === 1) musicPlaying = true;
-    if ([0, 2, 5].includes(payload.info)) musicPlaying = false;
-    updateMusicUi();
-  } catch {
-    // Messages from the embed that are not JSON can be ignored safely.
-  }
-});
+}
 
 window.addEventListener("pointerdown", (event) => {
   if (event.target.closest("#music-dock")) return;

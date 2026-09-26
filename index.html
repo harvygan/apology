@@ -317,7 +317,9 @@
   <footer class="site-footer"><span>Made with love, for my Love ♡</span></footer>
 
   <aside class="music-dock" id="music-dock" aria-label="Background music controls">
-    <iframe id="song-frame" class="song-frame" src="https://www.youtube.com/embed/8lbRDzhjqeM?enablejsapi=1&playsinline=1&controls=0&rel=0&loop=1&playlist=8lbRDzhjqeM&autoplay=1" allow="autoplay; encrypted-media" title="Libu-libong Buwan by December Avenue"></iframe>
+    <audio id="background-music" class="audio-element" preload="auto" loop>
+      <source src="assets/music/lbu-libong.mp3" type="audio/mpeg">
+    </audio>
     <button class="music-main" id="music-toggle" type="button" aria-label="Play our song">
       <span class="music-icon" id="music-icon" aria-hidden="true">♪</span>
       <span class="music-copy"><small>our song</small><strong id="music-label">play music</strong></span>
