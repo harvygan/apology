@@ -15,6 +15,8 @@ const body = document.body;
 const navToggle = $("#nav-toggle");
 const navMenu = $("#nav-menu");
 const navLinks = $$(".nav-menu a");
+const welcomeScreen = $("#welcome-screen");
+const beginButton = $("#begin-button");
 
 function closeNavigation() {
   body.classList.remove("nav-open");
@@ -92,6 +94,20 @@ function startMusic() {
   updateMusicUi();
 }
 
+function beginExperience() {
+  startMusic();
+  welcomeScreen?.classList.add("is-leaving");
+  welcomeScreen?.setAttribute("aria-hidden", "true");
+  body.classList.remove("welcome-open");
+  window.setTimeout(() => {
+    if (welcomeScreen) welcomeScreen.hidden = true;
+    document.getElementById("memories")?.scrollIntoView({ behavior: prefersReducedMotion ? "auto" : "smooth", block: "start" });
+  }, prefersReducedMotion ? 0 : 760);
+}
+
+beginButton?.addEventListener("click", beginExperience);
+if (welcomeScreen && !welcomeScreen.hidden) window.setTimeout(() => beginButton?.focus(), 0);
+
 function pauseMusic() {
   sendYouTubeCommand("pauseVideo");
   musicPlaying = false;
@@ -146,12 +162,12 @@ const storyStage = $("#story-stage");
 const storyButtons = $$(".story-thumb");
 const storyCaptions = [
   "My favorite smile.",
-  "A little moment that became one of my favorites.",
+  "Still my favorite girl.",
   "The small things are everything.",
   "Every version of you is beautiful to me.",
-  "A memory I never want to lose.",
-  "You make ordinary days feel special.",
-  "Always you."
+  "Asawa ko, look at you.",
+  "You probably don't know how much I love this photo.",
+  "Always you, Misis ko."
 ];
 const stories = storyButtons.map((button, index) => {
   const image = $("img", button);
@@ -278,7 +294,7 @@ finalMessageButton?.addEventListener("click", () => {
   const isOpen = !finalMessage.hidden;
   finalMessage.hidden = isOpen;
   finalMessageButton.setAttribute("aria-expanded", String(!isOpen));
-  finalMessageButton.innerHTML = isOpen ? "One more thing <span aria-hidden=\"true\">♡</span>" : "Keep this little note <span aria-hidden=\"true\">♡</span>";
+  finalMessageButton.innerHTML = isOpen ? "One last thing <span aria-hidden=\"true\">♡</span>" : "Keep this little note <span aria-hidden=\"true\">♡</span>";
   if (!isOpen) createTinyHearts();
 });
 

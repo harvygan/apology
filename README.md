@@ -1,4 +1,4 @@
-# For My Favorite Person
+# Personal Romantic Web Project
 
 A responsive, framework-free digital love letter built with HTML, CSS, and vanilla JavaScript.
 
